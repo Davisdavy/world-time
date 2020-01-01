@@ -6,8 +6,18 @@ class ChooseLocation extends StatefulWidget {
 }
 
 class _ChooseLocationState extends State<ChooseLocation> {
+
+  int counter = 0;
+
+  @override
+  void initState() {
+    super.initState();
+    print('Init sate function running');
+  }
+
   @override
   Widget build(BuildContext context) {
+    print('Build function running');
     return Scaffold(
       backgroundColor: Colors.grey[200],
       appBar: AppBar(
@@ -16,7 +26,15 @@ class _ChooseLocationState extends State<ChooseLocation> {
         centerTitle: true,
         elevation: 0,
       ),
-      body: Text('Choose location screen')
+      body:
+        RaisedButton(
+          onPressed: (){
+            setState(() {
+              counter += 1;
+            });
+          },
+        child: Text('Counter is $counter'),
+        ),
     );
   }
 }
