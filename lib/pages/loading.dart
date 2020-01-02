@@ -20,7 +20,6 @@ class _LoadingState extends State<Loading> {
      timeLoad = worldTime.time;
    });
 
-
  }
 
   @override
